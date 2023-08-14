@@ -70,7 +70,6 @@ def test_find_suitable_user():
     for user in users:
         if user['age'] < 20:
             suitable_users.append(user)
-            print(suitable_users)
     assert suitable_users == [
         {"name": "Stanislav", "age": 15},
         {"name": "Maria", "age": 18},
@@ -97,7 +96,8 @@ def test_readable_function():
 def print_def_name(func_name, *args):
     modified_name = str(func_name.__name__).replace('_', ' ').title()
     fin_args = [*args]
-    fin_args=str(fin_args).replace('\'', '')
+    fin_args = str(fin_args).replace('\'', '')
+    print(f'{modified_name} {fin_args}')
     return f'{modified_name} {fin_args}'
 
 
